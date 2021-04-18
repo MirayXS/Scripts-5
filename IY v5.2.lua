@@ -2964,10 +2964,10 @@ nosaves = false
 local loadedEventData = nil
 function saves()
 	if writefileExploit() then
-		if pcall(function() readfile("IY_FE.iy") end) then
-			if readfile("IY_FE.iy") ~= nil then
+		if pcall(function() readfile("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD") end) then
+			if readfile("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD") ~= nil then
 				local success, response = pcall(function()
-					local json = game:GetService("HttpService"):JSONDecode(readfile("IY_FE.iy"))
+					local json = game:GetService("HttpService"):JSONDecode(readfile("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD"))
 					if json.prefix ~= nil then prefix = json.prefix else prefix = ';' end
 					if json.StayOpen ~= nil then StayOpen = json.StayOpen else StayOpen = false end
 					if json.logsEnabled ~= nil then logsEnabled = json.logsEnabled else logsEnabled = false end
@@ -2988,19 +2988,19 @@ function saves()
 				if not success then
 					warn("Save Json Error:", response)
 					warn("Overwriting Save File")
-					writefileCooldown("IY_FE.iy", defaults)
+					writefileCooldown("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD", defaults)
 					wait()
 					saves()
 				end
 			else
-				writefileCooldown("IY_FE.iy", defaults)
+				writefileCooldown("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD", defaults)
 				wait()
 				saves()
 			end
 		else
-			writefileCooldown("IY_FE.iy", defaults)
+			writefileCooldown("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD", defaults)
 			wait()
-			if pcall(function() readfile("IY_FE.iy") end) then
+			if pcall(function() readfile("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD") end) then
 				saves()
 			else
 				nosaves = true
@@ -3125,7 +3125,7 @@ function updatesaves()
 			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
 			eventBinds = eventEditor.SaveData()
 		}
-		writefileCooldown("IY_FE.iy", game:GetService("HttpService"):JSONEncode(update))
+		writefileCooldown("QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD", game:GetService("HttpService"):JSONEncode(update))
 	end
 end
 
@@ -6142,7 +6142,7 @@ end)
 PluginsGUI = PluginEditor.background
 
 function addPlugin(name)
-	if name:lower() == 'plugin file name' or name:lower() == 'iy_fe.iy' or name == 'iy_fe' then
+	if name:lower() == 'plugin file name' or name == 'QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc.PTSD' or name == 'QUcCFH524QRZVmwA8MPsWMREgThGXuaERQSQAj2vQU4GXyu7Gc7ZNfp8fd2WcDLc' then
 		notify('Plugin Error','Please enter a valid plugin')
 	else
 		local file
