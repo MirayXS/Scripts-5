@@ -1,1 +1,1 @@
-SXL                   *   A@  @  €       print    Impostor Sus.                            
+SXL                   *   A@  @  €       print    Synapse x worked.                            
